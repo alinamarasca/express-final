@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="my-pets">
+      <h1>Your Animals</h1>
+
+      <p>There goes cards with ANIMALS.</p>
+      <a href="/my-pets/create">Add another pet</a>
+    
+      <% for(let i=0; i<addedPets.length; i++){ %>
+        <h2><%= addedPets[i].title %></h2>
+        <h3><%= addedPets[i].type %></h3>
+        <h3><%= addedPets[i].character %></h3>
+        <% } %>
+      
+    </div>
+    <%- include ('./partials/footer.ejs') %>
+  </body>
+</html>
